@@ -1,1 +1,0 @@
-USE nome_banco;
