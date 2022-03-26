@@ -1,0 +1,1 @@
+UPDATE nome_tabela SET nome_coluna = valor WHERE condição = valor;
