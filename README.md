@@ -104,8 +104,8 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 * Os decimais são subdivididos em de precisão simples e precisão dupla.
 * A diferença entre os dois é o nível de precisão de arredondamento dos valores das casas decimais.
 * Possuem o atributo que possibilita definir o número de dígitos e o de casas decimais.
-* O tipo *Decimal* é de tipo fixo em que difinimos o valor máximo de dígitos e casas decimais, tanto para inteiros como para decimais.
-* O tipo *Bit* representa um bit de até 64 bits.
+* O tipo ***Decimal*** é de tipo fixo em que difinimos o valor máximo de dígitos e casas decimais, tanto para inteiros como para decimais.
+* O tipo ***Bit*** representa um bit de até 64 bits.
 * O atributo ***auto_increment*** realiza a incrementação de sequência de forma automática.
 * O atributo ***zerofill*** preenche com zero os espações vazios antes do número.
 
@@ -171,6 +171,11 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
         <td>Blob</td>
         <td>blob</td>
         <td>65.535</td>
+    </tr>
+    <tr>
+        <td>Enum</td>
+        <td>enum(valor, valor, valor)</td>
+        <td></td>
     </tr>
 </table>
 
