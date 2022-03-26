@@ -137,7 +137,7 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
     </tr>
 </table>
 
-### CARACTERE
+### Caractere
 
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
 * O tipo ***varchar*** guarda caracteres simples de tamanho variável armazenando até 255 caracteres.
@@ -179,7 +179,7 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
     </tr>
 </table>
 
-### TIPO DATA E HORA
+### Data e hora
 
 <table>
     <tr>
@@ -216,11 +216,11 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 
 ## MODELAGEM DE BANCO DE DADOS
 
-### CONCEITO
+### Conceito
 * É o processo de análise, ordenação e exploração dos dados e tipos de informações que irão compor um sistema. A modelagem auxilia na identificação e definição
 das entidades, seus atributos e como essas entidades se relacionam entre si, seguindo a necessidade do sistema ao qual pertence.
 
-### ETAPAS DE MODELAGEM
+### Etapas de modelagem
 
 > #### Modelo de dados conceitual
 * Sua função é auxiliar no entendimento dos requisitos do sistema que são necessários. São exploradas as necessidades e o domínio do problema. Dessa forma é possível
@@ -232,7 +232,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 > #### Modelo de dados físico
 * É a implementação do projeto em um banco de dados. Nele são elabaradas as tabelas, suas colunas e seus relacionamentos, utilizando o SGBDR e se adequando as suas particularidades e restrições, assim como executando os padrões de nomenclatura adotados no projeto e apresentando os tipos de dados das colunas das tabelas do sistema.
 
-## IMPLEMENTAÇÃO DA MODELAGEM 
+## Implementação da modelagem
 
 ### Identificar os tipos de entidade
 * É o processo de determinar as diferentes entidades que representam os objetos do sistema. Uma entidade é a descrição de um conceito e os dados que ela possue.
