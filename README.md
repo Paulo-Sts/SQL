@@ -214,6 +214,27 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
     </tr>
 </table>
 
+## CONSTRAINTS
+
+### Primary key
+* É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também pode ser utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
+* Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos sendo uma chave composta.
+
+### Foreign key
+* É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
+
+### Unique
+* Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
+
+### Not null
+* Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
+
+### Check
+* É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
+
+### Default
+* Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
+
 ## MODELAGEM DE BANCO DE DADOS
 
 ### Conceito
@@ -232,24 +253,24 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 > #### Modelo de dados físico
 * É a implementação do projeto em um banco de dados. Nele são elabaradas as tabelas, suas colunas e seus relacionamentos, utilizando o SGBDR e se adequando as suas particularidades e restrições, assim como executando os padrões de nomenclatura adotados no projeto e apresentando os tipos de dados das colunas das tabelas do sistema.
 
-## Implementação da modelagem
+### Implementação da modelagem
 
-### Identificar os tipos de entidade
+> #### Identificar os tipos de entidade
 * É o processo de determinar as diferentes entidades que representam os objetos do sistema. Uma entidade é a descrição de um conceito e os dados que ela possue.
 
-### Identificar atributos
+> #### Identificar atributos
 * É a definição dos atributos que formam as entidades do sistema, cada grupo de atributos pertencendo ao conceito que sua respectiva entidade representa. Estabelecer os atributos de forma coesa é fundamental para desenvolver o projeto de forma mais eficiente, levando em conta o domínio da aplicação.
 
-### Aplicar convenção de nome
+> #### Aplicar convenção de nome
 * É o conjunto de diretrizes que define as convenções sobre a nomenclatura das entidades que formam o sistema para modelagem tanto lógica como também física. Essa convenção deve refletir no entendimento dos humanos e nas considerações técnicas estabelacidas.
 
-### Identificar relacionamentos
+> #### Identificar relacionamentos
 * Se trata da definição dos relacionamentos entre as entidades. Deve-se levar em conta que diferentes relacionamentos requerem diferentes abordagens. Assim como a cardinalidade e se a relação é opcional ou obrigatória.
 
-### Associar chaves
+> #### Associar chaves
 * É a determinação se qual tipo de chave deve-se utilizar para realizar a associação entre entidades, sendo de dois tipos diferentes, as chaves naturais e as chaves substitutas.
 
-### Normalização
+> #### Normalização
 * É o processo de organização dos atributos a fim de aumentar a coesão dos tipos de dados que formam as entidades, eliminando assim possíveis inconsistências ou redundâncias de dados.
 * Primeira forma normal:
   - Uma entidade está na primeira forma normal (1NF) quando não contém grupos de dados repetidos.
@@ -258,5 +279,5 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 * Terceira forma normal:
   - Uma entidade está na terceira forma normal (3FN) se estiver na segunda forma normal e quando todos os seus atributos são diretamente dependentes da chave primária.
 
-### Diversificar 
+> #### Diversificar 
 * Esse processo visa aumentar o desempenho do sistema através da diversificação dos esquemas de dados, tornando mais eficiente o tempo de acesso aos dados.
