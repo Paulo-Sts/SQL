@@ -17,10 +17,10 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
 ## INTRODUÇÃO
 
 ### Banco de dados
-* Banco de dados, é um local de armazenamento de informações. Essas informações tem por função serem acessadas e utilizadas quando for necessário.  
+* Banco de dados, é uma coleção de dados de forma organizada com o objetivo de modelar aspectos do mundo real gerando assim informações. Com os bancos de dados é possível a criação de aplicações que manipulam as informações que eles armazenam.
 
-### Sistema gerenciador de banco de dados relacional (SGBDR)
-* São sistemas de banco de dados que gerenciam de maneira automática os registros que armazenam, seja alterando, criando ou exibindo esses registros.
+### Sistema gerenciador de banco de dados (SGBD)
+* São sistemas que gerenciam possibilitam a criação e gerência de bancos de dados de maneira automática.
 
 ### Banco de dados relacional
 * O Banco de dados relacional, é estruturado através de registros de entidades que se relacionam entre si.  
@@ -234,6 +234,8 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 
 ### Default
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
+
+## RELACIONAMENTOS
 
 ## MODELAGEM DE BANCO DE DADOS
 
