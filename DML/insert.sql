@@ -37,3 +37,13 @@ INSERT INTO nome_tabela (
     valor,
     valor
 );
+
+/* É possível omitir as colunas ao inserir dados, desde que todas os campos sejam preenchidos por novos dados */
+
+INSERT INTO nome_tabela
+ VALUES (
+    valor,
+    valor,
+    valor,
+    valor
+);
