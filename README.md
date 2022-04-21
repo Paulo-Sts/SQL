@@ -56,13 +56,13 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 > #### RELACIONAMENTOS
 * Os relacionamentos de um banco de dados, são associações entre as tabelas que definem as entidades através de instruções de junção que tem a função de recuparar os dados quando solicitados.
 
-##### 1:1
+##### RELACIONAMENTO 1:1
 * Nesse tipo de relacionamento, cada registro de uma entidade (tabela) pode está associado a apenas um único registro de outra entidade (tabela). Sendo assim um registro da tabela A está associado a um único registro da tabela B, quando o valor da chave primária do registro da tabela A, se relaciona (como chave estrangeira) há um único registro da tabela B.
 
-##### 1:N
+##### RELACIONAMENTO 1:N
 * No relacionamento um para muitos, um registro de uma entidade, pode se associar a um ou mais registros de outra entidade, enquanto isso no outro lado da associação os vários registros da entidade estão associados a no máximo um registro da outra entidade. Um registro da tabela A pode está associado a vários registros da tabela B, enquanto na tabela B cada registro se relaciona apenas com um registro da tabela A.
 
-##### N:N
+##### RELACIONAMENTO N:N
 * Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
 * Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
 
@@ -112,13 +112,15 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
 ##### DIVERSIFICAR
 * Esse processo visa aumentar o desempenho do sistema através da diversificação dos esquemas de dados, tornando mais eficiente o tempo de acesso aos dados.
-  
-## TIPOS DE DADOS
 
-### Numerico
+<br>
+
+## Tipos de dados
+
+> #### NUMERICO
 * Existem diversos tipos numéricos na linguagem sql, cada um tem suas características definindo assim cada caso de uso de forma adequada.
 
-> #### Inteiros
+##### INTEIROS
 * Os inteiros possuem a propriedade ***unsigned*** que retringe os valores a numeros positivos.
 
 <table>
@@ -172,8 +174,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-> #### Decimais
-
+##### DECIMAIS
 * Os decimais são subdivididos em de precisão simples e precisão dupla.
 * A diferença entre os dois é o nível de precisão de arredondamento dos valores das casas decimais.
 * Possuem o atributo que possibilita definir o número de dígitos e o de casas decimais.
@@ -210,8 +211,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-### Caractere
-
+> #### CARACTERE
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
 * O tipo ***varchar*** guarda caracteres simples de tamanho variável armazenando até 255 caracteres.
 * O tipo ***text*** guarda uma string com até 65.535 caracteres.
@@ -252,7 +252,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-### Data e hora
+> #### DATA E HORA
 
 <table>
     <tr>
@@ -287,23 +287,23 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-## CONSTRAINTS
+## Constraints
 
-### Primary key
+> #### PRIMARY KEY
 * É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também pode ser utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
 * Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos sendo uma chave composta.
 
-### Foreign key
+> #### FOREIGN KEY
 * É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
 
-### Unique
+> #### UNIQUE
 * Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
 
-### Not null
+> #### NOT NULL
 * Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
 
-### Check
+> #### CHECK
 * É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
 
-### Default
+> #### DEFAULT
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
