@@ -64,6 +64,7 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 
 ##### RELACIONAMENTO N:N
 * Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
+* Em banco banco de dados relacional, não existem relações diretas do tipo muitos para muitos, por essa razão utiliza-se uma terceira tabela de associação, que define tal tipo de associação. Essa associação trata-se de duas relações do tipo 1:N entre as entidades e a tabela de associação.
 * Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
 
 ## Modelagem de Banco de Dados
