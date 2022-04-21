@@ -235,7 +235,28 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 ### Default
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
 
-## RELACIONAMENTOS
+## MODELO ENTIDADE RELACIONAMENTO
+
+### Conceito
+* O modelo entidade relacionamento é um modelo conceitual que descreve os objetos ou entidades de um domínio, com suas características ou atributos e como essas entidades se relacionam entre si. Essa representação abstrata é definida pra estruturar o banco de dados de uma aplicação.
+
+### Entidades
+* São os objetos que fazem parte do domínio da aplicação, sendo esses representações de coisas do mundo real chamadas de entidades físicas, ou das interações entre os objetos do mundo real chamadas de entidades lógicas ou entidades associativas, que são relavantes para o domínio da aplicação.
+
+### Atributos
+* São as características relevantes que são responsáveis por descrever as entidades dentro do domínio de negócio. Os atributos descritivos são aqueles que representam características intrínsecas de uma entidade. Os atributos nominativos são os que além de descrever, definem e identificam um objeto. Os atributos referenciais são os que representam uma ligação de uma entidade com outra em um relacionamento.
+* Os atributos em sua estrutura podem ser divididos em atributos simples em que um único atributo define uma característica da entidade, ou em atributos compostos em que a definição de uma característica ou informação da entidade é descrita em vários atributos.
+* Alguns atributos, representam valores únicos para cada entidade e não podem se repetir, esses atributos são chamados de chave primária.
+
+### Relacionamentos
+* Os relacionamentos de um banco de dados, são associações entre as tabelas que definem as entidades através de instruções de junção que tem a função de recuparar os dados quando solicitados.
+
+> #### 1:1
+
+> #### 1:N
+
+> #### N:N
+
 
 ## MODELAGEM DE BANCO DE DADOS
 
