@@ -252,11 +252,14 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 * Os relacionamentos de um banco de dados, são associações entre as tabelas que definem as entidades através de instruções de junção que tem a função de recuparar os dados quando solicitados.
 
 > #### 1:1
+* Nesse tipo de relacionamento, cada registro de uma entidade (tabela) pode está associado a apenas um único registro de outra entidade (tabela). Sendo assim um registro da tabela A está associado a um único registro da tabela B, quando o valor da chave primária do registro da tabela A, se relaciona (como chave estrangeira) há um único registro da tabela B.
 
 > #### 1:N
+* No relacionamento um para muitos, um registro de uma entidade, pode se associar a um ou mais registros de outra entidade, enquanto isso no outro lado da associação os vários registros da entidade estão associados a no máximo um registro da outra entidade. Um registro da tabela A pode está associado a vários registros da tabela B, enquanto na tabela B cada registro se relaciona apenas com um registro da tabela A.
 
 > #### N:N
-
+* Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
+* Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
 
 ## MODELAGEM DE BANCO DE DADOS
 
