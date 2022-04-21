@@ -14,15 +14,15 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
 
 <br>
 
-## INTRODUÇÃO
+## Introdução
 
-### Banco de dados
+> #### BANCO DE DADOS
 * Banco de dados, é uma coleção de dados de forma organizada com o objetivo de modelar aspectos do mundo real gerando assim informações. Com os bancos de dados é possível a criação de aplicações que manipulam as informações que eles armazenam.
 
-### Sistema gerenciador de banco de dados (SGBD)
+> #### SISTEMA GERENCIADOR DE BANCO DE DADOS (SGBD)
 * São sistemas que gerenciam possibilitam a criação e gerência de bancos de dados de maneira automática.
 
-### Banco de dados relacional
+> #### BANCO DE DADOS RELACIONAL
 * O Banco de dados relacional, é estruturado através de registros de entidades que se relacionam entre si.  
 * Todo banco de dados, é formado por: campos, colunas, linhas ou tuplas e tabelas.
   - Um campo é o espaço onde é inserido um dado.
@@ -31,7 +31,7 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
   - Uma tabela é um conjunto de linhas, campos e colunas.
 * As relações entre registros são feitos através das chaves primária (primary key) e estrangeira (foreign key) responsáveis por realizar a integração no banco de dados.
 
-### Sql
+> #### SQL
 * O SQL ou linguagem de consulta estruturada (structured query language) é a linguagem utilizada por padrão por bancos de dados relacionais. De maneira geral os seus conjuntos  
 de comandos se dividem em três categorias: DDL, DML E DCL.
 * Linguagem de definição de dados (DDL): Responsáveis por criar, alterar e excluir entidades em um banco de dados.
@@ -40,6 +40,79 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 
 <br>
 
+## Modelo Entidade Relacionamento (MER)
+
+> #### CONCEITO
+* O modelo entidade relacionamento é um modelo conceitual que descreve os objetos ou entidades de um domínio, com suas características ou atributos e como essas entidades se relacionam entre si. Essa representação abstrata é definida pra estruturar o banco de dados de uma aplicação.
+
+> #### ENTIDADES
+* São os objetos que fazem parte do domínio da aplicação, sendo esses representações de coisas do mundo real chamadas de entidades físicas, ou das interações entre os objetos do mundo real chamadas de entidades lógicas ou entidades associativas, que são relavantes para o domínio da aplicação.
+
+> #### ATRIBUTOS
+* São as características relevantes que são responsáveis por descrever as entidades dentro do domínio de negócio. Os atributos descritivos são aqueles que representam características intrínsecas de uma entidade. Os atributos nominativos são os que além de descrever, definem e identificam um objeto. Os atributos referenciais são os que representam uma ligação de uma entidade com outra em um relacionamento.
+* Os atributos em sua estrutura podem ser divididos em atributos simples em que um único atributo define uma característica da entidade, ou em atributos compostos em que a definição de uma característica ou informação da entidade é descrita em vários atributos.
+* Alguns atributos, representam valores únicos para cada entidade e não podem se repetir, esses atributos são chamados de chave primária.
+
+> #### RELACIONAMENTOS
+* Os relacionamentos de um banco de dados, são associações entre as tabelas que definem as entidades através de instruções de junção que tem a função de recuparar os dados quando solicitados.
+
+##### 1:1
+* Nesse tipo de relacionamento, cada registro de uma entidade (tabela) pode está associado a apenas um único registro de outra entidade (tabela). Sendo assim um registro da tabela A está associado a um único registro da tabela B, quando o valor da chave primária do registro da tabela A, se relaciona (como chave estrangeira) há um único registro da tabela B.
+
+##### 1:N
+* No relacionamento um para muitos, um registro de uma entidade, pode se associar a um ou mais registros de outra entidade, enquanto isso no outro lado da associação os vários registros da entidade estão associados a no máximo um registro da outra entidade. Um registro da tabela A pode está associado a vários registros da tabela B, enquanto na tabela B cada registro se relaciona apenas com um registro da tabela A.
+
+##### N:N
+* Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
+* Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
+
+## Modelagem de Banco de Dados
+
+> #### CONCEITO
+* É o processo de análise, ordenação e exploração dos dados e tipos de informações que irão compor um sistema. A modelagem auxilia na identificação e definição
+das entidades, seus atributos e como essas entidades se relacionam entre si, seguindo a necessidade do sistema ao qual pertence.
+
+> #### ETAPAS DA MODELAGEM
+
+##### MODELO DE DADOS CONCEITUAL
+* Sua função é auxiliar no entendimento dos requisitos do sistema que são necessários. São exploradas as necessidades e o domínio do problema. Dessa forma é possível
+elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
+
+##### MODELO DE DADOS LÓGICO
+* Esse modelo define as entidades com suas características e suas respectivas relações são elaborados de acordo com a implementação esperada.
+
+##### MODELO DE DADOS FÍSICO
+* É a implementação do projeto em um banco de dados. Nele são elabaradas as tabelas, suas colunas e seus relacionamentos, utilizando o SGBDR e se adequando as suas particularidades e restrições, assim como executando os padrões de nomenclatura adotados no projeto e apresentando os tipos de dados das colunas das tabelas do sistema.
+
+> #### IMPLEMENTAÇÃO DA MODELAGEM
+
+##### IDENTIFICAR OS TIPOS DE ENTIDADE
+* É o processo de determinar as diferentes entidades que representam os objetos do sistema. Uma entidade é a descrição de um conceito e os dados que ela possue.
+
+##### IDENTIFICAR ATRIBUTOS
+* É a definição dos atributos que formam as entidades do sistema, cada grupo de atributos pertencendo ao conceito que sua respectiva entidade representa. Estabelecer os atributos de forma coesa é fundamental para desenvolver o projeto de forma mais eficiente, levando em conta o domínio da aplicação.
+
+##### APLICAR CONVENÇÃO DE NOME
+* É o conjunto de diretrizes que define as convenções sobre a nomenclatura das entidades que formam o sistema para modelagem tanto lógica como também física. Essa convenção deve refletir no entendimento dos humanos e nas considerações técnicas estabelacidas.
+
+##### IDENTIFICAR RELACIONAMENTOS
+* Se trata da definição dos relacionamentos entre as entidades. Deve-se levar em conta que diferentes relacionamentos requerem diferentes abordagens. Assim como a cardinalidade e se a relação é opcional ou obrigatória.
+
+##### ASSOCIAR CHAVES
+* É a determinação se qual tipo de chave deve-se utilizar para realizar a associação entre entidades, sendo de dois tipos diferentes, as chaves naturais e as chaves substitutas.
+
+##### NORMALIZAÇÃO
+* É o processo de organização dos atributos a fim de aumentar a coesão dos tipos de dados que formam as entidades, eliminando assim possíveis inconsistências ou redundâncias de dados.
+* Primeira forma normal:
+  - Uma entidade está na primeira forma normal (1NF) quando não contém grupos de dados repetidos.
+* Segunda forma normal:
+  - Uma entidade está na segunda forma normal (2NF) se estiver na primeira forma normal e quando todos os seus atributos que não são chave primária dependem de sua chave primária.
+* Terceira forma normal:
+  - Uma entidade está na terceira forma normal (3FN) se estiver na segunda forma normal e quando todos os seus atributos são diretamente dependentes da chave primária.
+
+##### DIVERSIFICAR
+* Esse processo visa aumentar o desempenho do sistema através da diversificação dos esquemas de dados, tornando mais eficiente o tempo de acesso aos dados.
+  
 ## TIPOS DE DADOS
 
 ### Numerico
@@ -234,76 +307,3 @@ de comandos se dividem em três categorias: DDL, DML E DCL.
 
 ### Default
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
-
-## MODELO ENTIDADE RELACIONAMENTO
-
-### Conceito
-* O modelo entidade relacionamento é um modelo conceitual que descreve os objetos ou entidades de um domínio, com suas características ou atributos e como essas entidades se relacionam entre si. Essa representação abstrata é definida pra estruturar o banco de dados de uma aplicação.
-
-### Entidades
-* São os objetos que fazem parte do domínio da aplicação, sendo esses representações de coisas do mundo real chamadas de entidades físicas, ou das interações entre os objetos do mundo real chamadas de entidades lógicas ou entidades associativas, que são relavantes para o domínio da aplicação.
-
-### Atributos
-* São as características relevantes que são responsáveis por descrever as entidades dentro do domínio de negócio. Os atributos descritivos são aqueles que representam características intrínsecas de uma entidade. Os atributos nominativos são os que além de descrever, definem e identificam um objeto. Os atributos referenciais são os que representam uma ligação de uma entidade com outra em um relacionamento.
-* Os atributos em sua estrutura podem ser divididos em atributos simples em que um único atributo define uma característica da entidade, ou em atributos compostos em que a definição de uma característica ou informação da entidade é descrita em vários atributos.
-* Alguns atributos, representam valores únicos para cada entidade e não podem se repetir, esses atributos são chamados de chave primária.
-
-### Relacionamentos
-* Os relacionamentos de um banco de dados, são associações entre as tabelas que definem as entidades através de instruções de junção que tem a função de recuparar os dados quando solicitados.
-
-> #### 1:1
-* Nesse tipo de relacionamento, cada registro de uma entidade (tabela) pode está associado a apenas um único registro de outra entidade (tabela). Sendo assim um registro da tabela A está associado a um único registro da tabela B, quando o valor da chave primária do registro da tabela A, se relaciona (como chave estrangeira) há um único registro da tabela B.
-
-> #### 1:N
-* No relacionamento um para muitos, um registro de uma entidade, pode se associar a um ou mais registros de outra entidade, enquanto isso no outro lado da associação os vários registros da entidade estão associados a no máximo um registro da outra entidade. Um registro da tabela A pode está associado a vários registros da tabela B, enquanto na tabela B cada registro se relaciona apenas com um registro da tabela A.
-
-> #### N:N
-* Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
-* Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
-
-## MODELAGEM DE BANCO DE DADOS
-
-### Conceito
-* É o processo de análise, ordenação e exploração dos dados e tipos de informações que irão compor um sistema. A modelagem auxilia na identificação e definição
-das entidades, seus atributos e como essas entidades se relacionam entre si, seguindo a necessidade do sistema ao qual pertence.
-
-### Etapas de modelagem
-
-> #### Modelo de dados conceitual
-* Sua função é auxiliar no entendimento dos requisitos do sistema que são necessários. São exploradas as necessidades e o domínio do problema. Dessa forma é possível
-elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
-
-> #### Modelo de dados lógico
-* Esse modelo define as entidades com suas características e suas respectivas relações são elaborados de acordo com a implementação esperada.
-
-> #### Modelo de dados físico
-* É a implementação do projeto em um banco de dados. Nele são elabaradas as tabelas, suas colunas e seus relacionamentos, utilizando o SGBDR e se adequando as suas particularidades e restrições, assim como executando os padrões de nomenclatura adotados no projeto e apresentando os tipos de dados das colunas das tabelas do sistema.
-
-### Implementação da modelagem
-
-> #### Identificar os tipos de entidade
-* É o processo de determinar as diferentes entidades que representam os objetos do sistema. Uma entidade é a descrição de um conceito e os dados que ela possue.
-
-> #### Identificar atributos
-* É a definição dos atributos que formam as entidades do sistema, cada grupo de atributos pertencendo ao conceito que sua respectiva entidade representa. Estabelecer os atributos de forma coesa é fundamental para desenvolver o projeto de forma mais eficiente, levando em conta o domínio da aplicação.
-
-> #### Aplicar convenção de nome
-* É o conjunto de diretrizes que define as convenções sobre a nomenclatura das entidades que formam o sistema para modelagem tanto lógica como também física. Essa convenção deve refletir no entendimento dos humanos e nas considerações técnicas estabelacidas.
-
-> #### Identificar relacionamentos
-* Se trata da definição dos relacionamentos entre as entidades. Deve-se levar em conta que diferentes relacionamentos requerem diferentes abordagens. Assim como a cardinalidade e se a relação é opcional ou obrigatória.
-
-> #### Associar chaves
-* É a determinação se qual tipo de chave deve-se utilizar para realizar a associação entre entidades, sendo de dois tipos diferentes, as chaves naturais e as chaves substitutas.
-
-> #### Normalização
-* É o processo de organização dos atributos a fim de aumentar a coesão dos tipos de dados que formam as entidades, eliminando assim possíveis inconsistências ou redundâncias de dados.
-* Primeira forma normal:
-  - Uma entidade está na primeira forma normal (1NF) quando não contém grupos de dados repetidos.
-* Segunda forma normal:
-  - Uma entidade está na segunda forma normal (2NF) se estiver na primeira forma normal e quando todos os seus atributos que não são chave primária dependem de sua chave primária.
-* Terceira forma normal:
-  - Uma entidade está na terceira forma normal (3FN) se estiver na segunda forma normal e quando todos os seus atributos são diretamente dependentes da chave primária.
-
-> #### Diversificar 
-* Esse processo visa aumentar o desempenho do sistema através da diversificação dos esquemas de dados, tornando mais eficiente o tempo de acesso aos dados.
