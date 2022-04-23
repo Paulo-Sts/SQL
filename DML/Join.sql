@@ -29,5 +29,6 @@ e também traz todos os atributos da tabela do lado direito da consulta */
 
 
 /* Full join*/
+
 /* Essa consulta retorna a união da junção de duas ou mais tabelas e retorna os dados que se relacionam a partir de uma atributo em comum (a interseção de valores) 
 e também traz todos os atributos da tabela do lado direito da consulta e do lado esquerdo */
