@@ -1,0 +1,12 @@
+SELECT * FROM nome_tabela apelido_tabela, nome_tabela2 apelido_tabela2
+WHERE apelido_tabela.id = apelido_tabela2.id_nome_coluna_chave_estrangeira;
+
+SELECT apelido_tabela.campo_tabela AS alias_nome_coluna, apelido_tabela2.campo_tabela AS alias_nome_coluna2 FROM 
+nome_tabela apelido_tabela, nome_tabela2 apelido_tabela2 WHERE apelido_tabela.id = apelido_tabela2.id_nome_coluna_chave_estrangeira;
+
+SELECT 
+    apelido_tabela2.nome_coluna AS alias_nome_coluna2,
+    apelido_tabela.nome_coluna AS alias_nome_coluna,
+    nome_coluna AS alias_nome_coluna
+    FROM nome_tabela apelido_tabela 
+    INNER JOIN nome_tabela2 apelido_tabela2 ON apelido_tabela.id = apelido_tabela2.id_nome_coluna_chave_estrangeira;
