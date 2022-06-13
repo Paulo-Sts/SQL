@@ -1,4 +1,3 @@
-
 /* Operadores relacionais */
 
 /*
