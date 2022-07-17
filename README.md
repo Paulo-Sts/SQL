@@ -172,6 +172,14 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
         <td>2xE63-1</td>
         <td>2xE64-1</td>
     </tr>
+    <tr>
+        <td>Boolean</td>
+        <td></td>
+        <td></td>
+        <td>0 (False)</td>
+        <td></td>
+        <td>1 (true)</td>
+    </tr>
 </table>
 
 ##### DECIMAIS
