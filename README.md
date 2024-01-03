@@ -2,7 +2,7 @@
     <img align="left" height="110" width="200" alt="MySql" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg">
 </div>
 
-# MySql
+# MySQL
 Conceitos e sintaxe Sql usando o dialeto MySql.
 
 <br>
