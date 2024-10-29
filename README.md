@@ -2,27 +2,27 @@
     <img align="left" height="110" width="200" alt="MySql" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg">
 </div>
 
-# MySQL
-Conceitos e sintaxe Sql usando o dialeto MySql.
+### MySQL
+* Conceitos e sintaxe Sql usando o dialeto MySql.
 
 <br>
 
-> #### Criar Imagem do MySql
+#### Criar Imagem do MySql
 ~~~ 
 docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedobanco" -e "MYSQL_ROOT_PASSWORD=password" mysql:latest
 ~~~  
 
 <br>
 
-## Introdução
+## CONCEITOS
 
-> #### BANCO DE DADOS
+> ### Banco de dados
 * Banco de dados, é uma coleção de dados de forma organizada com o objetivo de modelar aspectos do mundo real gerando assim informações. Com os bancos de dados é possível a criação de aplicações que manipulam as informações que eles armazenam.
 
-> #### SISTEMA GERENCIADOR DE BANCO DE DADOS (SGBD)
+> ### Sistema gerenciador de banco de dados (SGBD)
 * São sistemas que possibilitam a criação e gerência de bancos de dados de maneira automatizada.
 
-> #### BANCO DE DADOS RELACIONAL
+> ### Banco de dados relacional
 * O Banco de dados relacional, é estruturado através de registros de entidades que se relacionam entre si.  
 * Todo banco de dados, é formado por: campos, colunas, linhas ou tuplas e tabelas.
   - Um campo é o espaço onde é inserido um dado.
@@ -31,7 +31,7 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
   - Uma tabela é um conjunto de linhas, campos e colunas.
 * As relações entre registros são feitos através das chaves primária (primary key) e estrangeira (foreign key) responsáveis por realizar a integração através de relacionamentos no banco de dados.
 
-> #### SQL
+> ### SQL
 * O SQL ou linguagem de consulta estruturada (structured query language) é a linguagem utilizada por padrão por bancos de dados relacionais. De maneira geral os seus conjuntos de comandos se dividem em três categorias: DDL, DML E DCL.
 * Linguagem de definição de dados (DDL): Responsáveis por criar, alterar e excluir entidades em um banco de dados.
 * Linguagem de Manipulação de dados (DML): Responsáveis por manipular os dados, inserindo, alterando, selecionando e apagando registros dentro de um banco de dados.
@@ -39,69 +39,65 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
 
 <br>
 
-## Modelo Entidade Relacionamento (MER)
-
-> #### CONCEITO
+## MODELO ENTIDADE RELACIONAMENTO (MER)
 * O modelo entidade relacionamento é um modelo conceitual que descreve os objetos ou entidades de um domínio, com suas características ou atributos e como essas entidades se relacionam entre si. Essa representação abstrata é definida pra estruturar o banco de dados de uma aplicação.
 
-> #### ENTIDADES
+> ### Entidades
 * São os objetos que fazem parte do domínio da aplicação, sendo esses representações de coisas do mundo real chamadas de entidades físicas, ou das interações entre os objetos do mundo real chamadas de entidades lógicas ou entidades associativas, que são relavantes para o domínio da aplicação.
 
-> #### ATRIBUTOS
+> ### Atributos
 * São as características relevantes que são responsáveis por descrever as entidades dentro do domínio de negócio. Os atributos descritivos são aqueles que representam características intrínsecas de uma entidade. Os atributos nominativos são os que além de descrever, definem e identificam um objeto. Os atributos referenciais são os que representam uma ligação de uma entidade com outra em um relacionamento.
 * Os atributos em sua estrutura podem ser divididos em atributos simples em que um único atributo define uma característica da entidade, ou em atributos compostos em que a definição de uma característica ou informação da entidade é descrita em vários atributos.
 * Alguns atributos, representam valores únicos para cada entidade e não podem se repetir, é nessa categoria de atributos que faz parte a chave primária.
 
-> #### RELACIONAMENTOS
+> ### Relacionamentos
 * Os relacionamentos de um banco de dados, são associações entre as tabelas que definem entidades associadas através de instruções de junção. Essas por tem a função de facilitar recuperação dos dados quando solicitados.
 
-##### RELACIONAMENTO 1:1
+#### Relacionamento 1:1
 * Nesse tipo de relacionamento, cada registro de uma entidade (tabela) pode estar associado a apenas um único registro de outra entidade (tabela). Sendo assim um registro da tabela A está associado a um único registro da tabela B, quando o valor da chave primária do registro da tabela A, se relaciona (como chave estrangeira) há um único registro da tabela B.
 
-##### RELACIONAMENTO 1:N
+#### Relacionamento 1:N
 * No relacionamento um para muitos, um registro de uma entidade, pode se associar a um ou mais registros de outra entidade, enquanto isso no outro lado da associação os vários registros da entidade estão associados a no máximo um registro da outra entidade. Sendo assim um registro da tabela A pode está associado a vários registros da tabela B, enquanto na tabela B cada registro se relaciona apenas com um registro da tabela A.
 
-##### RELACIONAMENTO N:N
+#### Relacionamento N:N
 * Em um relacionamento muitos para muitos, cada registro de uma entidade pode estar associado a vários registros da outra entidade e vice-versa. Essa relação é criada através de uma entidade de associação (tabela) que contém a associação de todos os registros da primeira entidade que se relacionam com todos os registros da segunda unidade. Sendo assim um registro da tabela A está associado a vários registros da tabela B, enquanto um registro da tabela B também está associado a vários registros da tabela A. 
 * Em banco banco de dados relacional, não existem relações diretas do tipo muitos para muitos, por essa razão utiliza-se uma terceira tabela, que define tal tipo de associação. Essa associação trata-se de duas relações do tipo 1:N entre as entidades e a tabela de associação.
 * Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
 
-## Modelagem de Banco de Dados
-
-> #### CONCEITO
+## MODELAGEM DE BANCO DE DADOS
 * É o processo de análise, ordenação e exploração dos dados e tipos de informações que irão compor um sistema. A modelagem auxilia na identificação e definição
 das entidades, seus atributos e como essas entidades se relacionam entre si, seguindo a necessidade do sistema ao qual pertence.
 
-> #### ETAPAS DA MODELAGEM
+> ### Etapas da modelagem
 
-##### MODELO DE DADOS CONCEITUAL
+#### Modelo de dados conceitual
 * Sua função é auxiliar no entendimento dos requisitos do sistema que são necessários. São exploradas as necessidades e o domínio do problema. Dessa forma é possível
 elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
-##### MODELO DE DADOS LÓGICO
+#### Modelo de dados lógico
 * Esse modelo define as entidades com suas características e suas respectivas relações são elaborados de acordo com a implementação esperada.
 
-##### MODELO DE DADOS FÍSICO
+#### Modelo de dados físico
 * É a implementação do projeto em um banco de dados. Nele são elabaradas as tabelas, suas colunas e seus relacionamentos, utilizando o SGBDR e se adequando as suas particularidades e restrições, assim como executando os padrões de nomenclatura adotados no projeto e apresentando os tipos de dados das colunas das tabelas do sistema.
 
-> #### IMPLEMENTAÇÃO DA MODELAGEM
+> ### Implementação da modelagem
 
-##### IDENTIFICAR OS TIPOS DE ENTIDADE
+#### Identificar os tipos de entidade
 * É o processo de determinar as diferentes entidades que representam os objetos do sistema. Uma entidade é a descrição de um conceito e os dados que ela possue.
 
-##### IDENTIFICAR ATRIBUTOS
+#### Identificar atributos
 * É a definição dos atributos que formam as entidades do sistema, cada grupo de atributos pertencendo ao conceito que sua respectiva entidade representa. Estabelecer os atributos de forma coesa é fundamental para desenvolver o projeto de forma mais eficiente, levando em conta o domínio da aplicação.
 
-##### APLICAR CONVENÇÃO DE NOME
+#### Aplicar convenção de nome
 * É o conjunto de diretrizes que define as convenções sobre a nomenclatura das entidades que formam o sistema para modelagem tanto lógica como também física. Essa convenção deve refletir no entendimento dos humanos e nas considerações técnicas estabelecidas.
 
-##### IDENTIFICAR RELACIONAMENTOS
+#### Identificar relacionamentos
 * Se trata da definição dos relacionamentos entre as entidades. Deve-se levar em conta que diferentes relacionamentos requerem diferentes abordagens. Assim como a cardinalidade e se a relação é opcional ou obrigatória.
 
-##### ASSOCIAR CHAVES
+#### Associar chaves
 * É a determinação de qual tipo de chave deve-se utilizar para realizar a associação entre entidades, sendo de dois tipos diferentes, as chaves naturais e as chaves substitutas.
 
-##### NORMALIZAÇÃO
+#### Normalização
 * É o processo de organização dos atributos a fim de aumentar a coesão dos tipos de dados que formam as entidades, eliminando assim possíveis inconsistências ou redundâncias de dados.
 * Primeira forma normal:
   - Uma entidade está na primeira forma normal (1NF) quando não contém grupos de dados repetidos.
@@ -110,7 +106,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 * Terceira forma normal:
   - Uma entidade está na terceira forma normal (3FN) se estiver na segunda forma normal e quando todos os seus atributos são diretamente dependentes da chave primária.
 
-##### DIVERSIFICAR
+#### Diversificar
 * Esse processo visa aumentar o desempenho do sistema através da diversificação dos esquemas de dados, tornando mais eficiente o tempo de acesso aos dados.
 
 <br>
