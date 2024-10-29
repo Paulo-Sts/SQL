@@ -1,9 +1,5 @@
-<div style="display:inline_block">
-    <img align="left" height="110" width="200" alt="MySql" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg">
-</div>
-
-### MySQL
-* Conceitos e sintaxe Sql usando o dialeto MySql.
+# SQL
+Conceitos e sintaxe da linguagem SQL.
 
 <br>
 
@@ -293,21 +289,21 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
 ## CONSTRAINTS
 
-> ### Primary key
+#### Primary key
 * É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também é utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
 * Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos como uma chave composta.
 
-> ### Foreign key 
+#### Foreign key 
 * É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
 
-> ### Unique
+#### Unique
 * Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
 
-> ### Not null
+#### Not null
 * Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
 
-> ### Check
+#### Check
 * É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
 
-> #### Default
+#### Default
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
