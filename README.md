@@ -111,12 +111,12 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
 <br>
 
-## Tipos de dados
+## TIPOS DE DADOS
 
-> #### NUMERICO
+> ### Numerico
 * Existem diversos tipos numéricos na linguagem sql, cada um tem suas características definindo assim cada caso de uso de forma adequada.
 
-##### INTEIROS
+#### Inteiros
 * Os inteiros possuem a propriedade ***unsigned*** que retringe os valores a numeros positivos.
 
 <table>
@@ -178,7 +178,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-##### DECIMAIS
+#### Decimais
 * Os decimais são subdivididos em de precisão simples e precisão dupla.
 * A diferença entre os dois é o nível de precisão de arredondamento dos valores das casas decimais.
 * Possuem o atributo que possibilita definir o número de dígitos e o de casas decimais.
@@ -215,7 +215,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-> #### CARACTERE
+> ### Caractere
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
 * O tipo ***varchar*** guarda caracteres simples de tamanho variável armazenando até 255 caracteres.
 * O tipo ***text*** guarda uma string com até 65.535 caracteres.
@@ -256,7 +256,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-> #### DATA E HORA
+> ### Data e hora
 
 <table>
     <tr>
@@ -291,23 +291,23 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-## Constraints
+## CONSTRAINTS
 
-> #### PRIMARY KEY
+> ### Primary key
 * É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também é utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
 * Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos como uma chave composta.
 
-> #### FOREIGN KEY
+> ### Foreign key 
 * É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
 
-> #### UNIQUE
+> ### Unique
 * Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
 
-> #### NOT NULL
+> ### Not null
 * Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
 
-> #### CHECK
+> ### Check
 * É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
 
-> #### DEFAULT
+> #### Default
 * Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
