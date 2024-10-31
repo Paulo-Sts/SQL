@@ -107,6 +107,29 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
 <br>
 
+## CONSTRAINTS
+
+#### Primary key
+* É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também é utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
+* Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos como uma chave composta.
+
+#### Foreign key 
+* É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
+
+#### Unique
+* Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
+
+#### Not null
+* Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
+
+#### Check
+* É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
+
+#### Default
+* Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
+
+<br>
+
 ## TIPOS DE DADOS
 
 > ### Numerico
@@ -286,24 +309,3 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
         <td>1901 à 2155</td>
     </tr>
 </table>
-
-## CONSTRAINTS
-
-#### Primary key
-* É uma constraint usada para indicar de forma única um registro na tabela, esse campo não pode ser nulo. A chave primária também é utilizada para estabelecer relacionamento entre tabelas, ao ter seu valor inserido em outra tabela como uma nova coluna, essa nova coluna é denominada como foreign key.  
-* Uma tabela tem apenas uma chave primária que pode ser formada por uma coluna simples ou por vários campos como uma chave composta.
-
-#### Foreign key 
-* É uma constraint formada por um campo ou mais em uma tabela que faz referência a chave primária de outra tabela e assim estabelece uma relação entre as duas. 
-
-#### Unique
-* Define que todos os valores dos campos ao qual for aplicada sejam únicos, não permitindo assim a repetição de valores em diferentes registros.
-
-#### Not null
-* Essa constraint define que uma coluna de uma tabela não possa receber valores nulos. Dessa forma é obrigatório o preenchimento do campo ao se adicionar um novo registro ou altera-lo.
-
-#### Check
-* É utilizada para limitar o conjunto de valores que podem ser inseridos na coluna, valores esses que devem atender a condição estabelida para serem registrados.
-
-#### Default
-* Essa constraint define um valor padrão a ser registrado em um campo de uma coluna, caso nenhum outro valor seja especificado.
