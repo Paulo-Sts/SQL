@@ -139,64 +139,14 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 #### Inteiros
 * Os inteiros possuem a propriedade ***unsigned*** que retringe os valores a numeros positivos.
 
-<table>
-    <tr>
-        <td><b>TIPO</b></td>
-        <td><b>VALOR EM BYTES</b></td>
-        <td><b>MENOR VALOR</b></td>
-        <td><b>MENOR VALOR (UNSIGNED)</b></td>
-        <td><b>MAIOR VALOR</b></td>
-        <td><b>MAIOR VALOR (UNSIGNED)</b></td>
-    </tr>
-    <tr>
-        <td>Tinyint</td>
-        <td>1</td>
-        <td>-128</td>
-        <td>0</td>
-        <td>127</td>
-        <td>255</td>
-    </tr>
-    <tr>
-        <td>Smallint</td>
-        <td>2</td>
-        <td>-32768</td>
-        <td>0</td>
-        <td>32767</td>
-        <td>65535</td>
-    </tr>
-    <tr>
-        <td>Mediumint</td>
-        <td>3</td>
-        <td>-8388608</td>
-        <td>0</td>
-        <td>8388607</td>
-        <td>16777215</td>
-    </tr>
-    <tr>
-        <td>Int</td>
-        <td>4</td>
-        <td>-2147483648</td>
-        <td>0</td>
-        <td>2147483647</td>
-        <td>4294967295</td>
-    </tr>
-    <tr>
-        <td>Bigint</td>
-        <td>8</td>
-        <td>-2xE63</td>
-        <td>0</td>
-        <td>2xE63-1</td>
-        <td>2xE64-1</td>
-    </tr>
-    <tr>
-        <td>Boolean</td>
-        <td></td>
-        <td></td>
-        <td>0 (False)</td>
-        <td></td>
-        <td>1 (true)</td>
-    </tr>
-</table>
+| TIPO      | VALOR EM BYTES | MENOR VALOR | MENOR VALOR (UNSIGNED) | MAIOR VALOR | MAIOR VALOR (UNSIGNED) |
+| --------- | -------------- | ----------- | ---------------------- | ----------- | ---------------------- |
+| Tinyint   | 1              | -128        | 0                      | 127         | 255                    |
+| Smallint  | 2              | -32768      | 0                      | 32767       | 65535                  |
+| Mediumint | 3              | -8388608    | 0                      | 8388607     | 16777215               |
+| Int       | 4              | -2147483648 | 0                      | 2147483647  | 4294967295             |
+| Bigint    | 8              | -2xE63      | 0                      | 2xE63-1     | 2xE64-1                |
+| Boolean   |                |             | 0 (False)              |             | 1 (true)               |
 
 #### Decimais
 * Os decimais são subdivididos em de precisão simples e precisão dupla.
@@ -207,33 +157,13 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 * O atributo ***auto_increment*** realiza a incrementação de sequência de forma automática.
 * O atributo ***zerofill*** preenche com zero os espaços vazios antes do número.
 
-<table>
-    <tr>
-        <td><b>TIPO</b></td>
-        <td><b>FORMATO</b></td>
-        <td><b>MAIOR VALOR</b></td>
-    </tr>
-    <tr>
-        <td>Float</td>
-        <td>float(tamanho, valor)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Double</td>
-        <td>double(tamanho, valor)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Decimal</td>
-        <td>decimal(tamanho, valor)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Bit</td>
-        <td>bit(tamanho)</td>
-        <td>64</td>
-    </tr>
-</table>
+| TIPO    | FORMATO                 | MAIOR VALOR | 
+| ------- | ----------------------- | ----------- | 
+| Float   | float(tamanho, valor)   |             | 
+| Double  | double(tamanho, valor)  |             | 
+| Decimal | decimal(tamanho, valor) |             | 
+| Bit     | bit(tamanho)            | 64          | 
+
 
 #### Caractere
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
