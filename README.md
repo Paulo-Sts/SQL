@@ -60,6 +60,8 @@ docker run -d -p 3306:3306 --name nome-do-container -e "MYSQL_DATABASE=nomedoban
 * Em banco banco de dados relacional, não existem relações diretas do tipo muitos para muitos, por essa razão utiliza-se uma terceira tabela, que define tal tipo de associação. Essa associação trata-se de duas relações do tipo 1:N entre as entidades e a tabela de associação.
 * Uma dica para entender as associações é usar expressões que representam a interação das entidades. Por exemplo em uma relação N:N entre as entidades autor e livro, uma forma de descrever a associação seria: um autor escreve vários livros, e um livro é escrito por vários autores.
 
+<br>
+
 ## MODELAGEM DE BANCO DE DADOS
 * É o processo de análise, ordenação e exploração dos dados e tipos de informações que irão compor um sistema. A modelagem auxilia na identificação e definição
 das entidades, seus atributos e como essas entidades se relacionam entre si, seguindo a necessidade do sistema ao qual pertence.
@@ -132,8 +134,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 
 ## TIPOS DE DADOS
 
-> ### Numerico
-* Existem diversos tipos numéricos na linguagem sql, cada um tem suas características definindo assim cada caso de uso de forma adequada.
+> ### MYSQL
 
 #### Inteiros
 * Os inteiros possuem a propriedade ***unsigned*** que retringe os valores a numeros positivos.
