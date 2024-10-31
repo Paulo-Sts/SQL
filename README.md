@@ -235,7 +235,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-> ### Caractere
+#### Caractere
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
 * O tipo ***varchar*** guarda caracteres simples de tamanho variável armazenando até 255 caracteres.
 * O tipo ***text*** guarda uma string com até 65.535 caracteres.
@@ -276,7 +276,7 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
     </tr>
 </table>
 
-> ### Data e hora
+#### Data e hora
 
 <table>
     <tr>
