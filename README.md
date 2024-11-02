@@ -164,7 +164,6 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 | Decimal | decimal(tamanho, valor) |             | 
 | Bit     | bit(tamanho)            | 64          | 
 
-
 #### Caractere
 * O tipo ***char*** guarda um número fixo de caracteres sendo até 255 caracteres.
 * O tipo ***varchar*** guarda caracteres simples de tamanho variável armazenando até 255 caracteres.
@@ -173,70 +172,20 @@ elaborar um modelo conceitual dos dados que formam a estrutura do projeto.
 * Para tipos predefinidos existe o tipo ***enum*** que define opções de valores para serem armazenados no banco.
 * Os atributos ***set*** e ***collate*** definem o conjunto de caracteres que serão utilizados.
 
-<table>
-    <tr>
-        <td><b>TIPO</b></td>
-        <td><b>FORMATO</b></td>
-        <td><b>MAIOR VALOR</b></td>
-    </tr>
-    <tr>
-        <td>Char</td>
-        <td>char(tamanho)</td>
-        <td>255</td>
-    </tr>
-    <tr>
-        <td>Varchar</td>
-        <td>varchar(tamanho)</td>
-        <td>255</td>
-    </tr>
-    <tr>
-        <td>Text</td>
-        <td>text(tamanho)</td>
-        <td>65.535</td>
-    </tr>
-    <tr>
-        <td>Blob</td>
-        <td>blob</td>
-        <td>65.535</td>
-    </tr>
-    <tr>
-        <td>Enum</td>
-        <td>enum(valor, valor, valor)</td>
-        <td></td>
-    </tr>
-</table>
+| TIPO    | FORMATO                   | MAIOR VALOR | 
+| ------- | ------------------------- | ----------- | 
+| Char    | char(tamanho)             | 255         | 
+| Varchar | varchar(tamanho)          | 255         | 
+| Text    | text(tamanho)             | 65.535      | 
+| Blob    | blob(tamanho)             | 65.535      | 
+| Enum    | enum(valor, valor, valor) |             |
 
 #### Data e hora
 
-<table>
-    <tr>
-        <td><b>TIPO</b></td>
-        <td><b>FORMATO</b></td>
-        <td><b>MAIOR VALOR</b></td>
-    </tr>
-    <tr>
-        <td>Date</td>
-        <td>YYYY-MM-DD</td>
-        <td>9999-12-31</td>
-    </tr>
-    <tr>
-        <td>Datetime</td>
-        <td>YYYY-MM-DD HH:MM:SS</td>
-        <td>9999-12-31 23:59:59</td>
-    </tr>
-    <tr>
-        <td>Timestamp</td>
-        <td>YYYY-MM-DD</td>
-        <td>1970-01-01 UTC à 2038-01-19 UTC</td>
-    </tr>
-    <tr>
-        <td>Time</td>
-        <td>HHHH:MM:SS</td>
-        <td>-838:59:59 a 838:59:59</td>
-    </tr>
-    <tr>
-        <td>Year</td>
-        <td>YYYY</td>
-        <td>1901 à 2155</td>
-    </tr>
-</table>
+| TIPO      | FORMATO             | MAIOR VALOR                     | 
+| --------- | ------------------- | ------------------------------- | 
+| Date      | YYYY-MM-DD          | 9999-12-31                      | 
+| Datetime  | YYYY-MM-DD HH:MM:SS | 9999-12-31 23:59:59             | 
+| Timestamp | YYYY-MM-DD          | 1970-01-01 UTC à 2038-01-19 UTC | 
+| Time      | HHHH:MM:SS          | -838:59:59 a 838:59:59          | 
+| Year      | YYYY                | 1901 à 2155                     |
